@@ -1,0 +1,6 @@
+#  Gradient Color Generator
+
+This project generates **random beautiful gradient backgrounds** .
+---
+
+## 📁 Working Structure
