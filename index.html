@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Gradient Background Generator</title>
+<style>
+body{
+  height:100vh;
+  margin:0;
+  display:flex;
+  justify-content:center;
+  align-items:center;
+  font-family:Arial;
+  transition:0.5s;
+}
+
+.box{
+  background:rgba(255,255,255,0.8);
+  padding:30px;
+  border-radius:12px;
+  text-align:center;
+}
+button{
+  padding:10px 20px;
+  font-size:16px;
+  cursor:pointer;
+}
+code{
+  display:block;
+  margin-top:15px;
+  font-size:14px;
+}
+</style>
+</head>
+<body>
+
+<div class="box">
+  <h3>Gradient Generator</h3>
+  <button onclick="generate()">Generate Gradient</button>
+  <code id="css"></code>
+</div>
+
+<script>
+function randomColor(){
+  return "#" + Math.floor(Math.random()*16777215).toString(16);
+}
+
+function generate(){
+  let c1 = randomColor();
+  let c2 = randomColor();
+
+  let gradient = "linear-gradient(120deg, "+c1+", "+c2+")";
+
+  document.body.style.background = gradient;
+  document.getElementById("css").innerText = gradient;
+}
+</script>
+
+</body>
+</html>
